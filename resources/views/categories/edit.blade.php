@@ -46,11 +46,13 @@
                                 <input type="text"
                                        name="name"
                                        value="{{ $categories->name }}"
-                                       class="form-control {{ $errors->has('name') ? 'is-invalid':'' }}" id="name" required>
+                                       class="form-control {{ $errors->has('name') ? 'is-invalid':'' }}" id="name"
+                                       required>
                             </div>
                             <div class="form-group">
                                 <label for="description">Deskripsi</label>
-                                <textarea name="description" id="description" cols="5" rows="5" class="form-control {{ $errors->has('description') ? 'is-invalid':'' }}">{{ $categories->description }}</textarea>
+                                <textarea name="description" id="description" cols="5" rows="5"
+                                          class="form-control {{ $errors->has('description') ? 'is-invalid':'' }}">{{ $categories->description }}</textarea>
                             </div>
                             @slot('footer')
                                 <div class="card-footer">

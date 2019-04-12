@@ -43,11 +43,13 @@
                                     <label for="name">Kategori</label>
                                     <input type="text"
                                            name="name"
-                                           class="form-control {{ $errors->has('name') ? 'is-invalid':'' }}" id="name" required>
+                                           class="form-control {{ $errors->has('name') ? 'is-invalid':'' }}" id="name"
+                                           required>
                                 </div>
                                 <div class="form-group">
                                     <label for="description">Deskripsi</label>
-                                    <textarea name="description" id="description" cols="5" rows="5" class="form-control {{ $errors->has('description') ? 'is-invalid':'' }}"></textarea>
+                                    <textarea name="description" id="description" cols="5" rows="5"
+                                              class="form-control {{ $errors->has('description') ? 'is-invalid':'' }}"></textarea>
                                 </div>
                                 @slot('footer')
                                     <div class="card-footer">
@@ -90,8 +92,10 @@
                                                 <form action="{{ route('kategori.destroy', $row->id) }}" method="POST">
                                                     @csrf
                                                     <input type="hidden" name="_method" value="DELETE">
-                                                    <a href="{{ route('kategori.edit', $row->id) }}" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>
-                                                    <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
+                                                    <a href="{{ route('kategori.edit', $row->id) }}"
+                                                       class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>
+                                                    <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i>
+                                                    </button>
                                                 </form>
                                             </td>
                                         </tr>
